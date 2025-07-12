@@ -33,7 +33,7 @@ Build a recipe page that matches the given design as closely as possible. The pa
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/yourusername/recipe-page)
-- Live Site URL: [Live Demo](https://recipe-page.vercel.app)
+- Live Site URL: [Live Demo](https://gleeful-sprite-aea882.netlify.app/)
 
 ## My process
 
