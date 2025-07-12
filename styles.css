@@ -1,0 +1,247 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables from Style Guide */
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  
+  /* Typography */
+  --font-family-serif: 'Young Serif', serif;
+  --font-family-sans: 'Outfit', sans-serif;
+  --font-size-base: 16px;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--stone-600);
+  background-color: var(--stone-100);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Container */
+.recipe-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  max-width: 46rem;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Image */
+.recipe-image {
+  padding: 2.5rem 2.5rem 0;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* Recipe Content */
+.recipe-content {
+  padding: 2.5rem;
+}
+
+/* Typography */
+h1 {
+  font-family: var(--font-family-serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--stone-900);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: var(--font-family-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--brown-800);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.recipe-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* Preparation Time Section */
+.preparation-time {
+  background-color: var(--rose-50);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.preparation-time h2 {
+  font-size: 1.25rem;
+  color: var(--rose-800);
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom list markers */
+.preparation-time ul li::marker {
+  color: var(--rose-800);
+}
+
+.ingredients ul li::marker {
+  color: var(--brown-800);
+}
+
+.instructions ol li::marker {
+  color: var(--brown-800);
+  font-weight: 600;
+}
+
+/* Instructions styling */
+.instructions ol li strong {
+  color: var(--stone-600);
+}
+
+/* Nutrition Table */
+.nutrition-note {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.nutrition-value {
+  font-weight: 700;
+  color: var(--brown-800);
+  text-align: right;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  padding: 1rem;
+  color: var(--stone-600);
+}
+
+.attribution a {
+  color: var(--brown-800);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  body {
+    background-color: var(--white);
+  }
+  
+  .recipe-container {
+    padding: 0;
+    align-items: flex-start;
+  }
+  
+  .recipe-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .recipe-image {
+    padding: 0;
+  }
+  
+  .recipe-image img {
+    border-radius: 0;
+  }
+  
+  .recipe-content {
+    padding: 2rem 2rem 2.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .preparation-time h2 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1440px) {
+  .recipe-container {
+    padding: 8rem 1rem;
+  }
+}
